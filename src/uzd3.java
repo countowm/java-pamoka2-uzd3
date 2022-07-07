@@ -12,20 +12,30 @@ public class uzd3 {
         login = skaitytuvas.next();
         System.out.println("Įveskite email ");
         email = skaitytuvas.next();
-        if (email.contains("@")){
-        }else{
-            System.out.println("emailas neturi simbolio @");
-        }
-        if (email.contains(".")){
-        }else{
-            System.out.println("emailas neturi simbolio .");
-        }
         System.out.println("Įveskite slaptazodi ");
         password = skaitytuvas.next();
-        if (login == password);{
-            System.out.println("login ir slaptazodis sutampa");
-        }
         System.out.println("Įveskite pakartotas slaptazodis ");
         pakartotasPassword = skaitytuvas.next();
     }
-}
+        public static Boolean arEmailasGeras(String email) {
+            if (email.contains("@") && email.contains(".")){
+                return true;
+                //System.out.println("emailas neturi simbolio @");
+            }
+            else{
+                return false;
+            }
+
+        }
+
+        public static boolean slaptazodziai(String login, String password, String pakartotasPassword){
+            if (login.equals(password)) {
+                //System.out.println("login ir slaptazodis sutampa");
+            }
+            if (!password.equals(pakartotasPassword)){
+                //System.out.println("slaptazodziai nesutampa");
+            }
+
+        }
+    }
+
